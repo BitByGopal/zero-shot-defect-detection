@@ -1,0 +1,22 @@
+{
+  "carpet": {
+    "threshold": 0.3494107723236084,
+    "calibration_mean": 0.14671504497528076,
+    "n_calibration": 20
+  },
+  "grid": {
+    "threshold": 0.24900054931640625,
+    "calibration_mean": 0.16200175881385803,
+    "n_calibration": 20
+  },
+  "bottle": {
+    "threshold": 0.26775604486465454,
+    "calibration_mean": 0.1566540002822876,
+    "n_calibration": 20
+  },
+  "hazelnut": {
+    "threshold": 0.3150838017463684,
+    "calibration_mean": 0.2506103217601776,
+    "n_calibration": 20
+  }
+}
