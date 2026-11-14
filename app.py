@@ -27,7 +27,7 @@ def get_model():
 
 @st.cache_resource(show_spinner="Building the reference memory bank...")
 def get_bank(category):
-    return dm.build_bank(get_model(), os.path.join(HERE, "reference", category))
+    return dm.build_bank(get_model(), os.path.join(HERE, "reference", category)) 
 
 
 def render(image, amap, thr):
