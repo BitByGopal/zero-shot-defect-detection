@@ -34,7 +34,7 @@ def render(image, amap, thr):
     """Returns (heatmap overlay, outlined defect region), both as RGB arrays at image size."""
     rgb = np.array(image)
     h, w = rgb.shape[:2]
-    big = cv2.resize(amap, (w, h), interpolation=cv2.INTER_LINEAR)
+    big = cv2.resize(amap, (w, h), interpolation=cv2.INTER_LINEAR) 
 
     # Fixed colour scale (0 to 2x threshold), so colours mean the same on every image
     norm = np.clip(big / (2 * thr), 0, 1) 
