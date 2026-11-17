@@ -29,7 +29,7 @@ def patch_features(model, image):
     """One L2-normalised feature vector per 14x14 patch: shape (1024, 768)."""
     x = _transform(image.convert("RGB")).unsqueeze(0).to(DEVICE)
     patches = model(pixel_values=x).last_hidden_state[0, 1:]     # drop the CLS token
-    return patches / patches.norm(dim=-1, keepdim=True)
+    return patches / patches.norm(dim=-1, keepdim=True) 
 
 
 def build_bank(model, ref_dir):
