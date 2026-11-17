@@ -37,7 +37,7 @@ def render(image, amap, thr):
     big = cv2.resize(amap, (w, h), interpolation=cv2.INTER_LINEAR)
 
     # Fixed colour scale (0 to 2x threshold), so colours mean the same on every image
-    norm = np.clip(big / (2 * thr), 0, 1)
+    norm = np.clip(big / (2 * thr), 0, 1) 
     colour = cv2.applyColorMap((norm * 255).astype(np.uint8), cv2.COLORMAP_JET)
     colour = cv2.cvtColor(colour, cv2.COLOR_BGR2RGB)
     overlay = cv2.addWeighted(rgb, 0.5, colour, 0.5, 0)
