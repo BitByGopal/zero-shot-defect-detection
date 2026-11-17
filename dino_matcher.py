@@ -46,5 +46,5 @@ def anomaly_map(model, image, bank):
     """256x256 map: high where a patch has no close match among the normal references."""
     nearest = (patch_features(model, image) @ bank.T).max(dim=1).values
     score = (1 - nearest).reshape(GRID, GRID).cpu().numpy()
-    score = cv2.resize(score, (MAP_SIZE, MAP_SIZE), interpolation=cv2.INTER_LINEAR)
+    score = cv2.resize(score, (MAP_SIZE, MAP_SIZE), interpolation=cv2.INTER_LINEAR)  
     return cv2.GaussianBlur(score, (0, 0), sigmaX=4)
